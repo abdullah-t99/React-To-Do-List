@@ -1,9 +1,14 @@
+import React from "react";
 import "./App.css";
+import Form from "./components/Form";
 
 function App() {
   return (
     <div className="App">
-      <h1>hello react baby. Lets make a to do list haha</h1>
+      <header>
+        <h1>Abdullah's To Do List</h1>
+      </header>
+      <Form />
     </div>
   );
 }
