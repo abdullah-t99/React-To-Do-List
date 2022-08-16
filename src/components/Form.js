@@ -4,10 +4,15 @@ import React from "react";
 // const Form = () => {
 
 // }
-function Form() {
+function Form(props) {
+  const inputTextHandler = (e) => {
+    //e stands for event. event tells you information of what just happened
+    console.log(e.target.value);
+    props.setInputText(e.target.value);
+  };
   return (
     <form>
-      <input type="text" className="todo-input" />
+      <input onChange={inputTextHandler} type="text" className="todo-input" />
       <button className="todo-button" type="submit">
         <i className="far fa-plus-square"></i>
       </button>
