@@ -6,6 +6,7 @@ import ToDoList from "./components/ToDoList";
 function App() {
   //setInputText is a function that allows you to change inputText. inputText is the actual value
   const [inputText, setInputText] = useState("");
+  // setTodos intialises the list and todos is the list of array
   const [todos, setTodos] = useState([]); // This is an array as it will contain multiple lists (objects)
   return (
     <div className="App">
@@ -20,7 +21,7 @@ function App() {
         setInputText={setInputText}
         inputText={inputText}
       />
-      <ToDoList />
+      <ToDoList todos={todos} />
     </div>
   );
 }
