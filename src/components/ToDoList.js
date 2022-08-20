@@ -8,7 +8,13 @@ function ToDoList(props) {
       {/* For each todo we have from the state, going to render out the Todo component  */}
       {/* for every todo we have, we will render the Todo component  */}
       {props.todos.map((todo) => (
-        <Todo text={todo.text} key={todo.id} />
+        <Todo
+          setTodos={props.setTodos}
+          todos={props.todos}
+          text={todo.text}
+          todo={todo}
+          key={todo.id}
+        /> ///.text and .id is based on what the state is. Check this in inspect mode. These were defined in the submitToDoHandler function in Form.js
       ))}
       <Todo />
     </div>
