@@ -11,7 +11,7 @@ function App() {
   return (
     <div className="App">
       <header>
-        <h1>Abdullah's To Do List </h1>
+        <h1>Abdullah's To Do List</h1>
       </header>
       {/* This prop is used to save the value that is entered (see Form.js) */}
       {/* setInputText then updates inputText and wherether its declared, will out what setInputText is  */}

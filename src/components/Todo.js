@@ -1,15 +1,15 @@
 import React from "react";
 
-function Todo(todo, props) {
+function Todo({ setTodos, todos, todo, text }) {
   const deleteHandler = () => {
     //we setup 'setTodos' to filter out our existing todos.
     //If the element id does not match the todo id, it will remove it
-    //props.setTodos(props.todos.filter((el) => el.id !== todo.id));
+    setTodos(todos.filter((el) => el.id !== todo.id));
     console.log(todo);
   };
   return (
     <div className="todo">
-      <ul className="todo-item">{todo.text}</ul>
+      <ul className="todo-item">{text}</ul>
       <button className="complete-btn">
         <i className="fas fa-check"></i>
       </button>

@@ -1,16 +1,16 @@
 import React from "react";
 import Todo from "./Todo.js";
 
-function ToDoList(props) {
+function ToDoList({ todos, setTodos }) {
   return (
     <div className="todo-container">
       <ul className="todo-list"></ul>
       {/* For each todo we have from the state, going to render out the Todo component  */}
       {/* for every todo we have, we will render the Todo component  */}
-      {props.todos.map((todo) => (
+      {todos.map((todo) => (
         <Todo
-          setTodos={props.setTodos}
-          todos={props.todos}
+          setTodos={setTodos}
+          todos={todos}
           text={todo.text}
           todo={todo}
           key={todo.id}
