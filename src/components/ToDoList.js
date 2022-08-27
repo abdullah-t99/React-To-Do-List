@@ -14,7 +14,7 @@ function ToDoList({ todos, setTodos }) {
           text={todo.text}
           todo={todo}
           key={todo.id}
-        /> ///.text and .id is based on what the state is. Check this in inspect mode. These were defined in the submitToDoHandler function in Form.js
+        /> //.text and .id is based on what the state is. Check this in inspect mode. These were defined in the submitToDoHandler function in Form.js
       ))}
       <Todo />
     </div>
