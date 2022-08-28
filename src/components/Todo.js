@@ -25,6 +25,7 @@ function Todo({ setTodos, todos, todo, text }) {
   };
   return (
     <div className="todo">
+      {/* 1 hour mark */}
       {/* <li className={`todo-item ${todo.completed ? "completed" : ""}`}>
         {text}
       </li> */}

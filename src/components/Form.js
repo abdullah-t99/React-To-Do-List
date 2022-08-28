@@ -6,7 +6,7 @@ import React from "react";
 // const Form = () => {
 
 // }
-function Form({ setTodos, todos, inputText, setInputText }) {
+function Form({ setTodos, todos, inputText, setInputText, setStatus }) {
   const inputTextHandler = (e) => {
     //e stands for event. event tells you information of what just happened
     console.log(e.target.value);
@@ -25,6 +25,10 @@ function Form({ setTodos, todos, inputText, setInputText }) {
     setInputText(""); // this changes the state for input text to be "" after submitting
   };
 
+  const statusHandler = (e) => {
+    setStatus(e.target.value);
+  };
+
   return (
     <form>
       {/* every time the value changes it runs inputTextHandler above  */}
@@ -38,7 +42,7 @@ function Form({ setTodos, todos, inputText, setInputText }) {
         <i className="far fa-plus-square"></i>
       </button>
       <div className="select">
-        <select name="todos" className="filter-todo">
+        <select onChange={statusHandler} name="todos" className="filter-todo">
           <option value="allTasks">All Tasks</option>
           <option value="completed">Completed</option>
           <option value="uncompleted">Uncompleted</option>
